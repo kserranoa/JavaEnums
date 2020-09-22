@@ -1,8 +1,7 @@
-
 package tallerEnum;
 
-
 public enum Control {
+    //Enumeracion para las alternativas de control
     NOCONTROL(0),
     PEQUENO(150),
     MEDIANO(200), 
