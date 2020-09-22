@@ -177,7 +177,7 @@ public class Selecciona {
                 
             //Seleciono una opcion que no existe
             default: 
-                System.out.println("Opcion no existe, fin del programa");
+                throw new AssertionError();
         } 
     }
 }
