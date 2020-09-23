@@ -2,13 +2,12 @@ package tallerEnum;
 import java.util.Scanner;
 
 public class Excepciones {
-    
        //Variables a utilizar para calcular costos
-       Integer opcionCita=0, opcionTrata=0, opcionControl=0, km=0;
+       Integer opcionCita=0, opcionTrata=0, opcionControl=0, km=0, costoDistancia;
        Scanner entrada = new Scanner(System.in);
        
     public void excepcion (){
-
+        
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         //Ingreso de opcion Cita
         do {
@@ -31,6 +30,7 @@ public class Excepciones {
            
                System.out.println("Ingrese la cantidad de kilometros");
                km = entrada.nextInt();
+               costoDistancia = km * 2;
            
             } catch (Exception ex){
                System.out.println("No puede ingresar texto");
@@ -65,8 +65,6 @@ public class Excepciones {
            } 
        } while ((opcionControl < 0) && (opcionControl > 5));
 
-       System.out.println("EL numero guardado en opcion cita es: " + opcionCita);     
-       System.out.println("EL numero guardado en opcion tratamiento es: " + opcionTrata);     
-       System.out.println("EL numero guardado en opcion control es: " + opcionControl);     
     }
+        
 }
