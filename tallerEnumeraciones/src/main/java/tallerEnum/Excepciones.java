@@ -2,8 +2,12 @@ package tallerEnum;
 import java.util.Scanner;
 
 public class Excepciones {
-
-    public void excepcion (Integer opcionCita, Integer opcionTrata, Integer opcionControl, Integer km, Scanner entrada){
+    
+       //Variables a utilizar para calcular costos
+       Integer opcionCita=0, opcionTrata=0, opcionControl=0, km=0;
+       Scanner entrada = new Scanner(System.in);
+       
+    public void excepcion (){
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         //Ingreso de opcion Cita
@@ -17,7 +21,7 @@ public class Excepciones {
            System.out.println("No puede ingresar texto");
            entrada.nextLine();
            } 
-        } while ((0 < opcionCita) && (opcionCita < 3));
+        } while ((0 > opcionCita) && (opcionCita > 3));
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -       
         //Ingreso de kilometros en caso de existir
@@ -32,7 +36,7 @@ public class Excepciones {
                System.out.println("No puede ingresar texto");
                entrada.nextLine();
                } 
-            } while (km > 0);
+            } while (km < 0);
         }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -       
     //Ingreso de la opcion tratamiento
@@ -45,7 +49,7 @@ public class Excepciones {
            System.out.println("No puede ingresar texto");
            entrada.nextLine();
            } 
-       } while ((opcionTrata>0) && (opcionTrata<4));
+       } while ((opcionTrata < 0) && (opcionTrata > 4));
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -       
 //Ingreso de la opcion Control
@@ -59,7 +63,10 @@ public class Excepciones {
            System.out.println("No puede ingresar texto");
            entrada.nextLine();
            } 
-       } while ((opcionControl > 0) && (opcionControl < 5));
+       } while ((opcionControl < 0) && (opcionControl > 5));
 
+       System.out.println("EL numero guardado en opcion cita es: " + opcionCita);     
+       System.out.println("EL numero guardado en opcion tratamiento es: " + opcionTrata);     
+       System.out.println("EL numero guardado en opcion control es: " + opcionControl);     
     }
 }
