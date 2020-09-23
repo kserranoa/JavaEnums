@@ -4,7 +4,6 @@ public class Selecciona {
     
     public void menu(Integer opcionCita, Integer opcionTrata, Integer opcionControl){
     
-        
         switch(opcionCita){
             //Selecionar cita en la clinica local
             case 1: 
