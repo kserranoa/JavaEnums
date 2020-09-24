@@ -1,17 +1,21 @@
 package tallerEnum;
 
+import opcionEnum.Tratamiento;
+import opcionEnum.Control;
+import opcionEnum.Cita;
+
 public class Selecciona {
     
     public void menu(Integer opcionCita, Integer opcionTrata, Integer opcionControl){
     
         switch(opcionCita){
-            //Selecionar cita en la clinica local
+            //Seleccionar cita en la clinica local
             case 1: 
-                //Selecionar el tipo de tratamiento
+                //Seleccionar el tipo de tratamiento
                 switch (opcionTrata) {
-                    //Selecionar tratamiento 1 para inyeccion
+                    //Seleccionar tratamiento 1 para inyeccion
                     case 1:
-                        //Selecionar control
+                        //Seleccionar control
                         switch (opcionControl) {
                             case 1:
                                     Total total = new Total(Cita.CLINICA, Tratamiento.INYECCION, Control.NOCONTROL);
@@ -34,9 +38,9 @@ public class Selecciona {
                         }
                         break;
                     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-                    //Selecionar tratamiento 2 para pastilla
+                    //Seleccionar tratamiento 2 para pastilla
                     case 2:
-                        //Selecionar control
+                        //Seleccionar control
                         switch (opcionControl) {
                             case 1:
                                     Total total = new Total(Cita.CLINICA, Tratamiento.PASTILLA, Control.NOCONTROL);
@@ -59,9 +63,9 @@ public class Selecciona {
                         }                        
                         break;                    
                     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                        
-                    //Selecionar tratamiento 3 para crema
+                    //Seleccionar tratamiento 3 para crema
                     case 3:
-                        //Selecionar control
+                        //Seleccionar control
                         switch (opcionControl) {
                             case 1:
                                     Total total = new Total(Cita.CLINICA, Tratamiento.CREMA, Control.NOCONTROL);
@@ -90,13 +94,13 @@ public class Selecciona {
                 break;
             
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-            //Selecionar cita a domicilio 
+            //Seleccionar cita a domicilio 
             case 2: 
-                //Selecionar el tipo de tratamiento
+                //Seleccionar el tipo de tratamiento
                 switch (opcionTrata) {
-                    //Selecionar tratamiento 1 para inyeccion
+                    //Seleccionar tratamiento 1 para inyeccion
                     case 1:
-                        //Selecionar control
+                        //Seleccionar control
                         switch (opcionControl) {
                             case 1:
                                     Total total = new Total(Cita.DOMICILIO, Tratamiento.INYECCION, Control.NOCONTROL);
@@ -119,9 +123,9 @@ public class Selecciona {
                         }
                         break;
                     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-                    //Selecionar tratamiento 2 para pastilla
+                    //Seleccionar tratamiento 2 para pastilla
                     case 2:
-                        //Selecionar control
+                        //Seleccionar control
                         switch (opcionControl) {
                             case 1:
                                     Total total = new Total(Cita.DOMICILIO, Tratamiento.PASTILLA, Control.NOCONTROL);
@@ -144,9 +148,9 @@ public class Selecciona {
                         }                        
                         break;                    
                     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                        
-                    //Selecionar tratamiento 3 para crema
+                    //Seleccionar tratamiento 3 para crema
                     case 3:
-                        //Selecionar control
+                        //Seleccionar control
                         switch (opcionControl) {
                             case 1:
                                     Total total = new Total(Cita.DOMICILIO, Tratamiento.CREMA, Control.NOCONTROL);
@@ -174,7 +178,7 @@ public class Selecciona {
                 }
                 break;
                 
-            //Seleciono una opcion que no existe
+            //Selecciono una opcion que no existe
             default: 
                 throw new AssertionError();
         } 
