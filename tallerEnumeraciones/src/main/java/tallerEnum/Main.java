@@ -8,7 +8,11 @@ public class Main {
 
         //Ingresar y validar los datos 
        Excepciones validarData = new Excepciones();
-       validarData.excepcion();
+       validarData.addOpcionCita();
+       validarData.addKm();
+       validarData.addOpcionTrata();
+       validarData.addOpcionControl();
+       
        Integer opcionCita = validarData.opcionCita;
        Integer opcionTrata = validarData.opcionTrata;
        Integer opcionControl = validarData.opcionControl;
