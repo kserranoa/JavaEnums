@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 public class Excepciones {
        //Variables a utilizar para calcular costos
-       Integer opcionCita=0, opcionTrata=0, opcionControl=0, km=0, costoDistancia;
-       Scanner entrada = new Scanner(System.in);
+       static Integer opcionCita=0, opcionTrata=0, opcionControl=0;
+       static double km=0, costoDistancia;
+       static Scanner entrada = new Scanner(System.in);
        
-    public void excepcion (){
+    public static void excepcion (){
         
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         //Ingreso de opcion Cita
@@ -31,7 +32,6 @@ public class Excepciones {
                System.out.println("Ingrese la cantidad de kilometros");
                km = entrada.nextInt();
                costoDistancia = km * 2;
-           
             } catch (Exception ex){
                System.out.println("No puede ingresar texto");
                entrada.nextLine();
